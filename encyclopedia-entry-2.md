@@ -6,23 +6,12 @@ It provides semantic meaning about the text it contains, effectively saying, "th
 
 ## Syntax
 
-The `<em>` tag surrounds the word/term being emphasised.
+The `<em>` tag surrounds the word/term being emphasised. 
 
 ```
-        background: <color | url(path) | others.. | none>;
+   
 ```
 
-### Values
-
-This is a CSS example, so each value would need it's own sub-section below.
-
-#### Color
-
-An explanation of the "color" value belongs here.
-
-#### url(path)
-
-An explanation of using `url(path)` as a value to link to an image belongs here.
 
 ## Example 1
 
