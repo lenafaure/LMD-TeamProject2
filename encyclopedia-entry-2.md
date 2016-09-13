@@ -1,6 +1,6 @@
 #The `<em>` html tag 
 
-*The HTML element `<em>` is used to emphasize text, which traditionally means that the text is displayed in italics by the browser*
+*The HTML tag `<em>` is used to emphasize text, which traditionally means that the text is displayed in italics by the browser.*
 
 It provides semantic meaning about the text it contains, effectively saying, "this text is slightly more important than other text here." Use it to mark up text content of any kind that needs *moderate* emphasis. (See the `<strong>` tag for *strongly* emphasized content).
 
