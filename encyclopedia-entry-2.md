@@ -6,7 +6,7 @@ It provides semantic meaning about the text it contains, effectively saying, "th
 
 ## Syntax
 
-Introduction to the syntax/usage. A example of CSS syntax is below:
+The `<em>` tag surrounds the word/term being emphasised.
 
 ```
         background: <color | url(path) | others.. | none>;
