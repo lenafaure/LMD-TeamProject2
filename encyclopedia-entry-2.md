@@ -18,6 +18,8 @@ Will render:
 
 >I just *had* to eat this piece of cake
 
+--> The person or software reading this line would read it with an emphasis on the words in italic.
+
 Most browsers will display the `<em>` element with the following default values:
 
 ```
