@@ -6,7 +6,15 @@ It provides semantic meaning about the text it contains, effectively saying, "th
 
 ## Usage
 
-The `<em>` tag surrounds the word/term being emphasised. It is a **phrase tag** : a tag used to indicate that a block of text has structural meaning (other phrase tags include `<strong>`, `<cite>`or `<code>`for example).
+The `<em>` tag surrounds the word/term being emphasised. It is a **phrase tag** : a tag used to indicate that a block of text has structural meaning (other phrase tags include `<strong>`, `<cite>` or `<code>` for example).
+
+Example of `<em>` tag usage: 
+
+```
+
+What this text needs is an <em>emphasis</em> and nothing else
+
+```
 
 Most browsers will display the `<em>` element with the following default values:
 
