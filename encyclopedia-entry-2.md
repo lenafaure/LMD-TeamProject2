@@ -42,7 +42,7 @@ Will render:
 
 >I just *had* to eat this piece of cake
 
---> The person or software reading this line would read it with an emphasis on the words in italic.
+→ The person or software reading this line would read it with an emphasis on the words in italic.
 
 ## Example 2
 
@@ -60,7 +60,7 @@ Will render:
 
 >I am considering buying the new *Harry Potter* for my daughter
 
-The fact that they all have the same default style is mere coincidence : there is no semantic meaning of emphasis in the second sentence, merely a visual way of saying that we are speaking of the book *Harry Potter*.
+→ The fact that they all have the same default style is mere coincidence : there is no semantic meaning of emphasis in the second sentence, merely a visual way of saying that we are speaking of the book *Harry Potter*.
 
 
 ## Special Notes
