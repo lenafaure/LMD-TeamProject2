@@ -16,7 +16,7 @@ Example of `<em>` tag usage:
 
 Will render : 
 
->This is how to emphasize a single word.
+>This is how to *emphasize* a single word.
 
 Most browsers will display the `<em>` element with the following default values:
 
