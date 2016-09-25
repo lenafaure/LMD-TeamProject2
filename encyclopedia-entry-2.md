@@ -11,10 +11,12 @@ The `<em>` tag surrounds the word/term being emphasised. It is a **phrase tag** 
 Example of `<em>` tag usage: 
 
 ```
-
 I just <em>had</em> to eat this piece of cake.
-
 ```
+
+Will render: 
+
+>I just *had* to eat this piece of cake
 
 Most browsers will display the `<em>` element with the following default values:
 
