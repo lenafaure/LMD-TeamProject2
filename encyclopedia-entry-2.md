@@ -69,7 +69,7 @@ By default the `<em>` tag is an inline element that can be nested, and each leve
 
 ## Browser support
 
-| Chrome    | IE        | Firefox   | Safari  | Opera   |
-|---        |---        |---        |---      |---      |
-| yes       | yes       | yes       | yes     | yes     |
+| Chrome    | Internet Explorer        | Firefox   | Safari  | Opera   |
+|---        |---                       |---        |---      |---      |
+| yes       | yes                      | yes       | yes     | yes     |
 
