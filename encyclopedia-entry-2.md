@@ -11,14 +11,12 @@ The `<em>` tag surrounds the word/term being emphasised. It is a **phrase tag** 
 Example of `<em>` tag usage: 
 
 ```
-I just <em>had</em> to eat this piece of cake.
+<p>This is how to <em>emphasize</em> a single word.</p>
 ```
 
-Will render: 
+Will render : 
 
->I just *had* to eat this piece of cake
-
---> The person or software reading this line would read it with an emphasis on the words in italic.
+>This is how to emphasize a single word.
 
 Most browsers will display the `<em>` element with the following default values:
 
@@ -34,31 +32,39 @@ The role of an `<em>`tag is **semantic**, not *visual* : it serve the purpose of
 
 ## Example 1
 
-Write a introduction to the example, sufficient to explain what the example is showing.
+The `<em>` element is used to mark up text content of any kind that needs moderate emphasis :
 
 ```
-
+I just <em>had</em> to eat this piece of cake.
 ```
+
+Will render: 
+
+>I just *had* to eat this piece of cake
+
+--> The person or software reading this line would read it with an emphasis on the words in italic.
 
 ## Example 2
 
-Write a introduction to the example, sufficient to explain what the example is showing.
+This `<em>` elements differentiates itself from the `<i>` element, which merely sets the font to italics. If you only want to make text italic, but not for the purposes of emphasis, use `<i>`.
 
 ```
+<p>Do you <em>really</em> need to buy a new phone?</p>
 
+<p>I am considering buying the new <i>Harry Potter</i> for my daughter</p>
 ```
 
-## Example 3 - Complex
+Will render: 
 
-Write a introduction to the example, sufficient to explain what the example is showing.
+>Do you *really* need to buy a new phone ?
+>I am considering buying the new *Harry Potter* for my daughter
 
-```
+The fact that they all have the same default style is mere coincidence : there is no semantic meaning of emphasis in the second sentence, merely a visual way of saying that we are speaking of the book *Harry Potter*.
 
-```
 
 ## Special Notes
 
-Add information that you found that seemed lesser known. Common bugs, obscure bugs, important distinctions, all belong in this section.
+By default the `<em>` tag is an inline element that can be nested, and each level of nesting increases the degree of emphasis. 
 
 
 ## Browser support
