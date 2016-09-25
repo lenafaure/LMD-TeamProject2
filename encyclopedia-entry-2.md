@@ -12,7 +12,7 @@ Example of `<em>` tag usage:
 
 ```
 
-What this text needs is an <em>emphasis</em> and nothing else
+I just <em>had</em> to eat this piece of cake.
 
 ```
 
