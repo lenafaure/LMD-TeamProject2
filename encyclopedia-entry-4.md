@@ -34,7 +34,7 @@ margin-bottom: 50px;
 
 ![margin-bottom : length](img/margin_bottom_2.png)
  
-#### percentage
+### percentage
 
 Specifies a width in % of the width of the containing element.
 
@@ -49,7 +49,7 @@ margin-bottom: 10%;
 ![margin-bottom : percentage](img/margin_bottom_3.png)
 
 
-#### auto 
+### auto 
 
 The browser calculates a bottom margin.
 
@@ -62,7 +62,7 @@ margin-bottom: auto;
 ![margin-bottom : auto](img/margin_bottom_1.png)
 
 
-#### initial 
+### initial 
 
 Sets this property to its default value.
 
@@ -75,7 +75,7 @@ margin-bottom: initial;
 ![margin-bottom : initial](img/margin_bottom_4.png)
 
 
-#### inherit
+### inherit
 
 Specifies that the margin should be inherited from the parent element.
 
