@@ -32,6 +32,8 @@ Negative values are allowed.
 margin-bottom: 50px;
 ```
 
+Sets the margin-bottom to 50px :
+
 ![margin-bottom : length](img/margin_bottom_2.png)
  
 ### → percentage
@@ -46,6 +48,8 @@ Negative Values are allowed.
 margin-bottom: 10%;
 ```
 
+Sets the margin-bottom to 10% :
+
 ![margin-bottom : percentage](img/margin_bottom_3.png)
 
 
@@ -58,6 +62,8 @@ The browser calculates a bottom margin.
 ```
 margin-bottom: auto;
 ```
+
+Sets an automatic margin-bottom to 0 :
 
 ![margin-bottom : auto](img/margin_bottom_1.png)
 
@@ -72,6 +78,8 @@ Sets this property to its default value.
 margin-bottom: initial;
 ```
 
+Sets the margin-bottom to 0 :
+
 ![margin-bottom : initial](img/margin_bottom_4.png)
 
 
@@ -84,6 +92,8 @@ Specifies that the margin should be inherited from the parent element.
 ```
 margin-bottom: inherit;
 ```
+
+Sets the margin-bottom to 15px, the margin-bottom width of its parent block :
 
 ![margin-bottom : inherit](img/margin_bottom_5.png)
 
