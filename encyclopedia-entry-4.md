@@ -108,7 +108,7 @@ This does not happen on horizontal margins (left and right), only on vertical ma
 
 On this example we can see that the space between the two elements amount to 50px instead of adding the bottom and top margins of the two stacked element : 
 
-![margin-bottom : collapse](img/margin_bottom_6.png)
+![margin-bottom : collapse](img/margin_collapse.png)
 
 ## Browser support
 
