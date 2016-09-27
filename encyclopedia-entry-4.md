@@ -16,9 +16,9 @@ margin-bottom: length|percentage|auto|initial|inherit;
 
 
 
-### Values
+## Values
 
-#### length
+### length
 
 Specifies a fixed width in px, pt, cm, em, etc. 
 
@@ -26,48 +26,84 @@ Default value is 0.
 
 Negative values are allowed.
 
+#### Example : 
+
+```
+margin-bottom: 50px;
+```
+
+![margin-bottom : length](img/margin_bottom_2.png)
+ 
 #### percentage
 
 Specifies a width in % of the width of the containing element.
 
 Negative Values are allowed.
 
+#### Example : 
+
+```
+margin-bottom: 10%;
+```
+
+![margin-bottom : percentage](img/margin_bottom_3.png)
+
+
 #### auto 
 
 The browser calculates a bottom margin.
+
+#### Example : 
+
+```
+margin-bottom: auto;
+```
+
+![margin-bottom : auto](img/margin_bottom_1.png)
+
 
 #### initial 
 
 Sets this property to its default value.
 
+#### Example : 
+
+```
+margin-bottom: initial;
+```
+
+![margin-bottom : initial](img/margin_bottom_4.png)
+
+
 #### inherit
 
 Specifies that the margin should be inherited from the parent element.
 
-## Example 1
-
-Write a introduction to the example, sufficient to explain what the example is showing.
+#### Example : 
 
 ```
-        background: green;
+margin-bottom: inherit;
 ```
 
-## Example 2
+![margin-bottom : inherit](img/margin_bottom_5.png)
 
-Write a introduction to the example, sufficient to explain what the example is showing.
-
-```
-        background: url('path_to_image.png');
-```
-
-## Example 3 - Complex
-
-Write a introduction to the example, sufficient to explain what the example is showing.
-
-```
-        background: none 50% 25% auto contain fixed;
-```
 
 ## Special Notes
 
-Add information that you found that seemed lesser known. Common bugs, obscure bugs, important distinctions, all belong in this section.
+**Margin collapse**
+
+Collapsing margins happen when two elements with vertical margins are stacked on top of each other. If one margin is greater than the other, then that margin overrides the other, leaving only one margin.
+
+This does not happen on horizontal margins (left and right), only on vertical margins (top and bottom).
+
+On this example Here we can see that the space between the two elements amount to 50px instead of adding the bottom and top margins of the two stacked element : 
+
+![margin-bottom : collapse](img/margin_bottom_6.png)
+
+## Browser support
+
+*The numbers in the table specify the first browser version that fully supports the property.*
+
+| Chrome    | Internet Explorer        | Firefox   | Safari  | Opera   |
+|---        |---                       |---        |---      |---      |
+| 1.0       | 6.0                      | 1.0       | 1.0     | 3.5     |
