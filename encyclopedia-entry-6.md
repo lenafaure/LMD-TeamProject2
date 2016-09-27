@@ -50,5 +50,7 @@ Computes a replacement and is given matching information via its parameters.
 
 ## Special Notes
 
-Add information that you found that seemed lesser known. Common bugs, obscure bugs, important distinctions, all belong in this section.
+1. This method does not change the String object it is called on. It simply returns a new string.
+
+2. Don't forget : to perform a *global* search and replace in the whole string, include the `g` switch in the regular expression or the method will stop at the first occurrence.
 
