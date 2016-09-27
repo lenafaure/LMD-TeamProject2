@@ -106,7 +106,7 @@ Collapsing margins happen when two elements with vertical margins are stacked on
 
 This does not happen on horizontal margins (left and right), only on vertical margins (top and bottom).
 
-On this example Here we can see that the space between the two elements amount to 50px instead of adding the bottom and top margins of the two stacked element : 
+On this example we can see that the space between the two elements amount to 50px instead of adding the bottom and top margins of the two stacked element : 
 
 ![margin-bottom : collapse](img/margin_bottom_6.png)
 
