@@ -23,7 +23,8 @@ margin-bottom: length|percentage|auto|initial|inherit;
 Specifies a fixed width in px, pt, cm, em, etc. 
 
 Default value is 0.
-Negative nalues are allowed.
+
+Negative values are allowed.
 
 #### percentage
 
