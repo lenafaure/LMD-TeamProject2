@@ -13,7 +13,7 @@ string.replace(pattern, replacement)
 The `pattern` parameter can be a string or a RegExp, and the `replacement` parameter can be a string or a function to be called for each match :
 
 ```
-str.replace(regexp|substr, newSubStr|function[, flags])
+string.replace(regexp|substr, newSubStr|function[, flags])
 ```
 
 ## Return
