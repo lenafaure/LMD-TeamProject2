@@ -1,53 +1,52 @@
 #`String.prototype.replace()`
 
-*Write a short "what it is" here. This can be a one-word definition.*
+*The replace() method of the prototype of the String global object searches a string for matches with the first parameter (pattern) and replaces
+them with the second parameter (replacement).*
 
-Write a description here. Provide an overview of what the reference entry is, how it's used, it's significance, or how it's commonly used.
+```
+str.replace(pattern, replacement)
+```
 
 
 ## Syntax
 
-Introduction to the syntax/usage. A example of CSS syntax is below:
+The `pattern` parameter can be a string or a RegExp, and the `replacement` parameter can be a string or a function to be called for each match :
 
 ```
-        background: <color | url(path) | others.. | none>;
+str.replace(regexp|substr, newSubStr|function[, flags])
 ```
 
-### Values
+## Return
 
-This is a CSS example, so each value would need it's own sub-section below.
+String.prototype.replace() returns a new string with some or all matches of a pattern replaced by a replacement.
 
-#### Color
+## Parameters
 
-An explanation of the "color" value belongs here.
+### → First parameter : either a string or a regular expression:
 
-#### url(path)
+- **String**: 
+To be found literally in the input string. 
 
-An explanation of using `url(path)` as a value to link to an image belongs here.
+- **Regular Expression**: 
+To be matched against the input string. 
 
-## Example 1
+Be warned : only the *first occurrence* of a string or regular expression is replaced. If you want to replace multiple occurrences, you must use a regular expression with a global `/g` flag. 
 
-Write a introduction to the example, sufficient to explain what the example is showing.
+### → Second parameter : either a string or a function:
 
-```
-        background: green;
-```
+- **String**:
+Describes how to replace what has been found.
 
-## Example 2
+- **Function**:
+Computes a replacement and is given matching information via its parameters.
 
-Write a introduction to the example, sufficient to explain what the example is showing.
+## Example 1 
 
-```
-        background: url('path_to_image.png');
-```
 
-## Example 3 - Complex
+## Example 2 
 
-Write a introduction to the example, sufficient to explain what the example is showing.
 
-```
-        background: none 50% 25% auto contain fixed;
-```
+## Example 3 
 
 ## Special Notes
 
