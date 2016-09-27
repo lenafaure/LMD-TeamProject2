@@ -1,29 +1,46 @@
-#`margin-bottom`
+#`margin-bottom` in CSS
 
-*Write a short "what it is" here. This can be a one-word definition.*
+*The `margin-bottom` property in CSS sets the bottom margin for an HTML element.*
 
-Write a description here. Provide an overview of what the reference entry is, how it's used, it's significance, or how it's commonly used.
+The CSS margin properties are used to generate space around elements. The margin-bottom property is used for setting the margin for the bottom side of an element.
 
+![bottom-margin](bottommargin.jpg)
 
 ## Syntax
 
-Introduction to the syntax/usage. A example of CSS syntax is below:
+Like all the margin properties, the margin-bottom property can have the following values : 
 
 ```
-        background: <color | url(path) | others.. | none>;
+margin-bottom: length|percentage|auto|initial|inherit;
 ```
+
+
 
 ### Values
 
-This is a CSS example, so each value would need it's own sub-section below.
+#### length
 
-#### Color
+Specifies a fixed width in px, pt, cm, em, etc. 
 
-An explanation of the "color" value belongs here.
+Default value is 0 and negative Values are allowed.
 
-#### url(path)
+#### percentage
 
-An explanation of using `url(path)` as a value to link to an image belongs here.
+Specifies a width in % of the width of the containing element.
+
+Negative Values are allowed.
+
+#### auto 
+
+The browser calculates a bottom margin.
+
+#### initial 
+
+Sets this property to its default value.
+
+#### inherit
+
+Specifies that the margin should be inherited from the parent element.
 
 ## Example 1
 
