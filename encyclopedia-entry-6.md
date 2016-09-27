@@ -37,6 +37,11 @@ Be warned : only the *first occurrence* of a string or regular expression is rep
 - **String**:
 Describes how to replace what has been found.
 
+**If replacement is a string**, its content is used verbatim to replace the match. 
+
+The only exception is the special character dollar sign ($), which starts replacement directives :
+
+
 - **Function**:
 Computes a replacement and is given matching information via its parameters.
 
