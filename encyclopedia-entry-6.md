@@ -1,6 +1,6 @@
 #`String.prototype.replace()`
 
-*The replace() method of the prototype of the String global object searches a string for matches with the first parameter (pattern) and replaces
+*The replace() method of the of the String global Object prototype searches a string for matches with the first parameter (pattern) and replaces
 them with the second parameter (replacement).*
 
 ```
