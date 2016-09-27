@@ -8,7 +8,7 @@ The CSS margin properties are used to generate space around elements. The margin
 
 ## Syntax
 
-Like all the margin properties, the margin-bottom property can have the following values : 
+Like all the margin properties, the margin-bottom property can take the following values : 
 
 ```
 margin-bottom: length|percentage|auto|initial|inherit;
