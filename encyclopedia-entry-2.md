@@ -1,4 +1,4 @@
-#`<em>`
+#The `<em>` HTML tag
 
 *The HTML tag `<em>` is used to emphasize text, which traditionally means that the text is displayed in italics by the browser.*
 
