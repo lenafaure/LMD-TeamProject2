@@ -4,7 +4,7 @@
 them with the second parameter (replacement).*
 
 ```
-str.replace(pattern, replacement)
+string.replace(pattern, replacement)
 ```
 
 
