@@ -114,6 +114,7 @@ console.log(newPin);
 
 
 - **Function**:
+
 **If  replaceString is a function**, it will be called for each match, and the string returned by the function will be used as the replacement text.
 
 ```
