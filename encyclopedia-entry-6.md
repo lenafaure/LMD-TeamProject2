@@ -10,8 +10,9 @@ string.replace(searchFor, replaceString)
 
 ## Syntax
 
-The `searchFor` parameter: what word is going to be replaced. This can be a string or a regular expression.
-The `replaceString`parameter : what the word will be replaced with. This can be a string or a function returning a string.
+The `searchFor` parameter: what word is going to be replaced. This can be a **string** or a **regular expression**.
+
+The `replaceString`parameter : what the word will be replaced with. This can be a **string** or a **function** returning a string.
 
 ```
 string.replace(regexp|substr, newSubStr|function[, flags])
