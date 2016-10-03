@@ -12,7 +12,7 @@ string.replace(searchFor, replaceString)
 
 The `searchFor` parameter: what word is going to be replaced. This can be a **string** or a **regular expression**.
 
-The `replaceString`parameter : what the word will be replaced with. This can be a **string** or a **function** returning a string.
+The `replaceString` parameter : what the word will be replaced with. This can be a **string** or a **function** returning a string.
 
 ```
 string.replace(regexp|substr, newSubStr|function[, flags])
@@ -20,22 +20,21 @@ string.replace(regexp|substr, newSubStr|function[, flags])
 
 ## Return
 
-String.prototype.replace() returns a new string with some or all matches of `searchFor` replaced by `replaceString`.
+`String.prototype.replace()` returns a new string with some or all matches of `searchFor` replaced by `replaceString`.
 
 ## Parameters
 
 ### → First parameter : either a string or a regular expression:
 
 - **String**: 
-The most obvious way to do string replacement is by passing two strings to `replace()`, the string to find and the string to replace it with.
+The most obvious way to do string replacement is by passing two strings to `replace()`: the string to find and the string to replace it with.
 
 ```
 console.log("mommy".replace("m", "t"));
 // → tommy
 ```
 
-It’s worth mentioning that this approach is case sensitive. Searching for "M" in the above example would not work and the console would still print *"mommy"*.
-
+It’s worth mentioning that this approach is case sensitive. Searching for "M" in the above example would not work and the console would still print *"mommy"*. We will see how to counter this behaviour later on.
 
 
 There is one major caveat if the first parameter is a simple string : only  the first occurence of the `searchFor` is replaced, so :
