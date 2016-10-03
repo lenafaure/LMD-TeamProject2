@@ -117,3 +117,6 @@ On this example we can see that the space between the two elements amount to 50p
 | Chrome    | Internet Explorer        | Firefox   | Safari  | Opera   |
 |---        |---                       |---        |---      |---      |
 | 1.0       | 6.0                      | 1.0       | 1.0     | 3.5     |
+
+---------------
+*Léna Faure - 9/30/2016 - Career Path 3: Modern Front-End Developer*
