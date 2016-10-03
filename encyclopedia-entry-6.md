@@ -170,7 +170,7 @@ To understand well this example, let's take a little detour and decrypt the spec
 
 ## Example 3 : use a function for the replacement
 
-Instead of unsing a chain of characters for replacement, it is possible to use a function to manage the remplacement(s). This allows, for example, to perform operations on captured informations (as we saw in the previous example: $1, $2, $3...).
+Instead of using a chain of characters for replacement, it is possible to use a function to manage the remplacement(s). This allows, for example, to perform operations on captured informations (as we saw in the previous example: $1, $2, $3...).
 
 The parameters of the function have to respect a certain order (even if their names can vary) :
 
