@@ -20,7 +20,7 @@ string.replace(regexp|substr, newSubStr|function[, flags])
 
 ## Return
 
-String.prototype.replace() returns a new string with some or all matches of a pattern replaced by a replacement.
+String.prototype.replace() returns a new string with some or all matches of `searchFor` replaced by `replaceString`.
 
 ## Parameters
 
@@ -160,11 +160,11 @@ To understand well this example, let's take a little detour and decrypt the spec
 
 **The `/^` and `$/` symbols** at the beginning and end of the regular epression represent the beginning and end of the portion of string we are looking for (we are looking for a portion of string that contains two digits, a slash, two digits a slash and four digits).
 
-**The parenthesis** are used to capture the portion of text that the regular expression will extract from the string. Here we have three different portions of text that we want to capture and use.
+**The `()` parenthesis** are used to capture the portion of text that the regular expression will extract from the string. Here we have three different portions of text that we want to capture and use, and are refered to as *groups*.
 
-**The \d{n} symbol** finds a decimal character (a digit), and the `n`character between accolades indicates how many time the digit character is repeated. In this example, we want to find first a set of two digits, then another set of two digits, and a thirs set of four digits.
+**The `\d{n}` symbol** finds a decimal character (a digit), and the `n`character between accolades indicates how many time the digit character is repeated. In this example, we want to find first a set of two digits, then another set of two digits, and a thirs set of four digits.
 
-**The /\ symbols between the parenthesis** represent the slash `/` character that separates the sets of digits we want to find, but since it is part of the characters that a regex uses to perform, we have to escape it with an anti-slash `\`to tell the regular expression to interpret the slash as part of the string.
+**The `/\` symbols between the parenthesis** represent the slash `/` character that separates the sets of digits we want to find, but since it is part of the characters that a regex uses to perform, we have to escape it with an anti-slash `\`to tell the regular expression to interpret the slash as part of the string.
 
 
 ## Example 3 : use a function for the replacement
@@ -196,7 +196,28 @@ It contains the position of the text portion that has been found
 
 It contains the whole string.
 
-Let's illustrate this with a script that wil look for numbers in a string and convert them in letter-written numbers 
+Let's illustrate this with a script that will look for numbers in a string and add one to each number it founds : 
+
+```
+var string = "In 2 years I will be 20 years old";
+
+var result = string.replace(/(\d+)/g, function(str, p1) {
+    // Convert string to integer
+    p1 = parseInt(p1);
+    
+    // Check if p1 is an integer
+    if (!isNaN(p1)) {
+        // Add one to the integer
+        return p1 + 1;
+    }
+});
+
+console.log(result);
+// Prints "In 3 years I will be 21 years old"
+```
+
+Since we added the global `g` option to our regular expression, every digit (`d+` indicates that the number can have an infinite number of digits) in the string will be replaced. 
+
 
 ## Special Notes
 
@@ -204,3 +225,6 @@ Let's illustrate this with a script that wil look for numbers in a string and co
 
 2. Don't forget : to perform a *global* search and replace in the whole string, include the `g` switch in the regular expression or the method will stop at the first occurrence. If the first argument is a string, then only the first occurrence of the substring will be replaced. The only way to replace all instances of a substring is to provide a regular expression with the global flag (`/g`) specified.
 
+3. What if i want to replace a character by the dollar `$` sign ? Simply double `$$` the dollar sign in the replacement string.
+
+## Browser support
