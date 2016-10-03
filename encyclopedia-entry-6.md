@@ -81,7 +81,7 @@ Describes how to replace what has been found.
 
 **If replacement is a string**, its content is used verbatim to replace the match. The only exception is the special character dollar sign ($), which has special meaning :
 
-|Pattern:  | Inserts:                           |   
+|Pattern:  |Inserts:                            |   
 |---       |---                                 | 
 | `$$` 	   | $                                  |
 | `$&`     | Capture group text                 |                  
