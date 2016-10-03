@@ -65,7 +65,7 @@ console.log("Abracadabra".replace(/a/i, "o"));
 // → "obracadabra"
 ```
 
-Ok, now the first "A" character has been recognized and replaced. But what we want to do is to replace *all* the "a" charachters in the string. Let's add the `g` option this time : 
+Ok, now the first "A" character has been recognized and replaced. But what we want to do is to replace *all* the "a" characters in the string. Let's add the `g` option this time : 
 
 ```
 console.log("Abracadabra".replace(/a/ig, "o"));
@@ -84,7 +84,7 @@ Describes how to replace what has been found.
 
 $$ 		    $
 $&		    The matched text
-$number	  Capture group text
+$number	    Capture group text
 ``$` `` 	The text preceding the match
 $’		    The text following the match
 
@@ -124,20 +124,83 @@ var newString = a.replace(b, function replacer(match){
     return match.toUpperCase();
 } );
 console.log(newString);
+
 // Prints "The FBI's ten most wanted fugitives."
 ```
 
-## Example 1 
+
+## Example 1 : Use `replace()` with a simple string (no regular expression)
+
+Sometimes you just want  to replace a simple chain of characters by another. It is indeed useful to replace a word or a group of words, but is not as frequently used as the regular expressions:
+
+```
+var string = "My name is Bond";
+var result = string.replace("Bond", "James Bond");
+
+console.log(result);
+// Prints "My name is James Bond"
+```
 
 
-## Example 2 
+## Example 2 : capture informations from a string and reuse them in the replacement string (with regular expression)
+
+As we saw previously, it is possible to use capturing parenthesis to extract informations and reuse them in the output string. Let's say for example that we have a date written in US format : 05/09/2016, and we want to convert it to a day/month/year european format. We can definitely do that with regular expression and `replace()`:
+
+```
+var usDate = "05/09/2016";
+var euDate = usDate.replace(/(\d{2})\/(\d{2})\/(\d{4})$/, "$2/$1/$3");
+
+console.log(euDate);
+// Prints "09/05/2016";
+```
+
+Every number is captured within a parenthesis, and to retrieve each parenthesis, we just have to call $1, $2, $3 which correspond to each parenthesis in the order they were declared.
+
+To understand well this example, let's take a little detour and decrypt the special characters we used in this regular expression : 
+
+**The `/^` and `$/` symbols** at the beginning and end of the regular epression represent the beginning and end of the portion of string we are looking for (we are looking for a portion of string that contains two digits, a slash, two digits a slash and four digits).
+
+**The parenthesis** are used to capture the portion of text that the regular expression will extract from the string. Here we have three different portions of text that we want to capture and use.
+
+**The \d{n} symbol** finds a decimal character (a digit), and the `n`character between accolades indicates how many time the digit character is repeated. In this example, we want to find first a set of two digits, then another set of two digits, and a thirs set of four digits.
+
+**The /\ symbols between the parenthesis** represent the slash `/` character that separates the sets of digits we want to find, but since it is part of the characters that a regex uses to perform, we have to escape it with an anti-slash `\`to tell the regular expression to interpret the slash as part of the string.
 
 
-## Example 3 
+## Example 3 : use a function for the replacement
+
+Instead of unsing a chain of characters for replacement, it is possible to use a function to manage the remplacement(s). This allows, for example, to perform operations on captured informations (as we saw in the previous example: $1, $2, $3...).
+
+The parameters of the function have to respect a certain order (even if their names can vary) :
+
+```
+function(str, p1, p2, p3 /* ... */, offset, s)
+```
+
+Let's review in detail the meaning of each parameter : 
+
+- The `str` parameter
+
+It contains the text portion that has been found by the regular expression.
+
+- The `p*` parameters
+
+They contain th portions captured by the parenthesis.
+They represent the captured portions $1, $2, $3 that we saw earlier. If there are only three capturing parenthesis, there will be only three `p` parameters. If there are five capturing parenthesis, there will be five `p`.
+
+- The `offset`parameter
+
+It contains the position of the text portion that has been found
+
+- The `s` parameter
+
+It contains the whole string.
+
+Let's illustrate this with a script that wil look for numbers in a string and convert them in letter-written numbers 
 
 ## Special Notes
 
 1. This method does not change the String object it is called on. It simply returns a new string.
 
-2. Don't forget : to perform a *global* search and replace in the whole string, include the `g` switch in the regular expression or the method will stop at the first occurrence. If the first argument is a string, then only the first occurrence of the substring will be replaced. The only way to replace all instances of a substring is to provide a regular expression with the global flag specified,
+2. Don't forget : to perform a *global* search and replace in the whole string, include the `g` switch in the regular expression or the method will stop at the first occurrence. If the first argument is a string, then only the first occurrence of the substring will be replaced. The only way to replace all instances of a substring is to provide a regular expression with the global flag (`/g`) specified.
 
