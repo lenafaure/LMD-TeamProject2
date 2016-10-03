@@ -89,7 +89,7 @@ Describes how to replace what has been found.
 | ``$` ``  | The text preceding the match       |               
 | `$’`     | The text following the match       |
 
-Let's have a look at an example to understand how to use the special charachter as `replaceString` :
+Let's have a look at an example to understand how to use the special character as `replaceString` :
 
 The following uses a regex to look for a 4 digit number and replace it with the same number, but with dashes between the digits :
 
