@@ -163,7 +163,7 @@ To understand well this example, let's take a little detour and decrypt the spec
 
 **The `()` parenthesis** are used to capture the portion of text that the regular expression will extract from the string. Here we have three different portions of text that we want to capture and use, and are refered to as *groups*.
 
-**The `\d{n}` symbol** finds a decimal character (a digit), and the `n`character between accolades indicates how many time the digit character is repeated. In this example, we want to find first a set of two digits, then another set of two digits, and a thirs set of four digits.
+**The `\d{n}` symbol** finds a decimal character (a digit), and the `n`character between accolades indicates how many time the digit character is repeated. In this example, we want to find first a set of two digits, then another set of two digits, and a third set of four digits.
 
 **The `/\` symbols between the parenthesis** represent the slash `/` character that separates the sets of digits we want to find, but since it is part of the characters that a regex uses to perform, we have to escape it with an anti-slash `\`to tell the regular expression to interpret the slash as part of the string.
 
