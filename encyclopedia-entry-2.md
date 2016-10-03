@@ -74,3 +74,5 @@ By default the `<em>` tag is an inline element that can be nested, and each leve
 |---        |---                       |---        |---      |---      |
 | yes       | yes                      | yes       | yes     | yes     |
 
+---------------
+*Léna Faure - 9/30/2016 - Career Path 3: Modern Front-End Developer*
