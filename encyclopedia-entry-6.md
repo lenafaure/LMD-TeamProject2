@@ -81,13 +81,13 @@ Describes how to replace what has been found.
 
 **If replacement is a string**, its content is used verbatim to replace the match. The only exception is the special character dollar sign ($), which has special meaning :
 
-|Pattern:  |Inserts:                            |   
+|Pattern:  | Inserts:                           |   
 |---       |---                                 | 
-| $$ 	   | $                                  |
-| $&       | Capture group text                 |                  
-| $number  | The matched text                   |                    
+| `$$` 	   | $                                  |
+| `$&`     | Capture group text                 |                  
+| `$number`| The matched text                   |                    
 | ``$` ``  | The text preceding the match       |               
-| $’       | The text following the match       |
+| `$’`     | The text following the match       |
 
 Let's have a look at an example to understand how to use the special charachter as `replaceString` :
 
