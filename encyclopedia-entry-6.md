@@ -186,7 +186,7 @@ It contains the text portion that has been found by the regular expression.
 
 - The `p*` parameters
 
-They contain th portions captured by the parenthesis.
+They contain the portions captured by the parenthesis.
 They represent the captured portions $1, $2, $3 that we saw earlier. If there are only three capturing parenthesis, there will be only three `p` parameters. If there are five capturing parenthesis, there will be five `p`.
 
 - The `offset`parameter
