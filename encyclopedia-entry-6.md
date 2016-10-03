@@ -228,7 +228,7 @@ Since we added the global `g` option to our regular expression, every digit (`d+
 
 3. What if i want to replace a character by the dollar `$` sign ? Simply double `$$` the dollar sign in the replacement string.
 
-4. From example 3, we can see that the `replace()` method search through all occurences of `searchString` which actually allows us to iterate through it *without using a loop*.
+4. From example 3, we can see that the `replace()` method searches through all occurences of `searchString`, which actually allows us to iterate through it *without using a loop*. The `replace()` method does it automatically for us.
 
 ## Browser support
 
