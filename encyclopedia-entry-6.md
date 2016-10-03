@@ -58,14 +58,14 @@ console.log("Abracadabra".replace(/a/, "o"));
 // → "Abrocadabra"
 ```
 
-What's going on here ? The character that was replaced was only the second "a" : the first capital "A" was not recognized because our search is case sensitive. Let's add the `i` option to make the search case insensitive : 
+What's going on here ? The character that was replaced was only the second "a" : the first capital "A" was not recognized because our search is case sensitive. Let's add the `i` (ignore) option to make the search case insensitive : 
 
 ```
 console.log("Abracadabra".replace(/a/i, "o"));
 // → "obracadabra"
 ```
 
-Ok, now the first "A" character has been recognized and replaced. But what we want to do is to replace *all* the "a" characters in the string. Let's add the `g` option this time : 
+Ok, now the first "A" character has been recognized and replaced. But what we want to do is to replace *all* the "a" characters in the string. Let's add the `g` (global) option this time : 
 
 ```
 console.log("Abracadabra".replace(/a/ig, "o"));
@@ -82,11 +82,15 @@ Describes how to replace what has been found.
 
 **If replacement is a string**, its content is used verbatim to replace the match. The only exception is the special character dollar sign ($), which has special meaning :
 
-$$ 		    $
-$&		    The matched text
-$number	    Capture group text
-``$` `` 	The text preceding the match
-$’		    The text following the match
+| $$ 	   | $       
+|---       |---                       
+| $&       | Capture group text 
+|---       |---                       
+| $number  | The matched text   
+|---       |---                       
+| ``$` ``  | The text preceding the match
+|---       |---                       
+| $’       | The text following the match
 
 Let's have a look at an example to understand how to use the special charachter as `replaceString` :
 
@@ -227,4 +231,13 @@ Since we added the global `g` option to our regular expression, every digit (`d+
 
 3. What if i want to replace a character by the dollar `$` sign ? Simply double `$$` the dollar sign in the replacement string.
 
+4. From example 3, we can see that the `replace()` method search through all occurences of `searchString` which actually allows us to iterate through it *without using a loop*.
+
 ## Browser support
+
+| Chrome    | Internet Explorer        | Firefox   | Safari  | Opera   |
+|---        |---                       |---        |---      |---      |
+| yes       | yes                      | yes       | yes     | yes     |
+
+---------------
+*Léna Faure - 9/30/2016 - Career Path 3: Modern Front-End Developer*
