@@ -21,7 +21,7 @@ Math.max(1, 2, 3, 4); // 4
 ```
 ###Example 2
 
-Let's say you've have a list of customers' ages and you'd like to see how old your oldest customer is. You can find out by applying the `Math.max` method to your list of ages:
+Let's say you have a list of customers' ages and you'd like to see how old your oldest customer is. You can find out by applying the `Math.max` method to your list of ages:
 
 ```
 Math.max(18,37,34,28,19,31,36,21); // 37
