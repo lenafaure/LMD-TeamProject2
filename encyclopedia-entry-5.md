@@ -1,4 +1,4 @@
-#`Math.max()` Exaplained
+#`Math.max()` Explained
 
 The `Math.max()` function returns the number with the highest value. 
 
