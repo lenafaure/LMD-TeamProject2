@@ -2,9 +2,9 @@
 #The `<form>` Element Explained
 The HTML `<form>` tag is used to create any form that requires user input. The form section of a document can contain markup, normal content, special elements called controls, which include checkboxes, radio buttons, menus, textfields and more.
 
-Forms are primarily used to pass user-data to a speicifed URL. In laymens terms, forms are how we get input from the user, i.e. names, emails, contact information, birthdays, etc. 
+Forms are primarily used to pass user-data to a specifed URL. In layman's terms, forms are how we get input from the user, i.e. names, emails, contact information, birthdays, etc. 
 
-You've probably filled out a thousand forms before, their all too common. But making them is a different story. 
+You've probably filled out a thousand forms before, they all too common. But making them is a different story. 
 
 ###Understanding the Lingo
 Let's first get acquainted with the elements you'll have at your disposal, when building forms of all sorts.
@@ -20,7 +20,7 @@ You will add any elements you use, within the `<form></form>` markup.
 ```
 
 ##List of HTML Form Elements
-Forms can have quite a few input options you can utilize, as mentioned above. Let's break down all the  
+Forms can have quite a few input options you can utilize, as mentioned above. Let's break down all the options available :
 
 | Tag           | Description   |
 | ------------- |:-------------:|
@@ -71,7 +71,7 @@ this:
   </fieldset>
 </form>
 ```
-translages to this: 
+translates to this: 
 <form>
   <fieldset class="account-login">
     <label>Username</label>
