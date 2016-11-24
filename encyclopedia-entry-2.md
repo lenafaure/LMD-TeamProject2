@@ -10,7 +10,7 @@ The `<em>` tag surrounds the word/term being emphasised. It is a **phrase tag** 
 
 Example of `<em>` tag usage: 
 
-```
+```html
 <p>This is how to <em>emphasize</em> a single word.</p>
 ```
 
@@ -20,7 +20,7 @@ Will render :
 
 Most browsers will display the `<em>` element with the following default values:
 
-```
+```html
 em { 
     font-style: italic;
 }
@@ -34,7 +34,7 @@ The role of an `<em>`tag is **semantic**, not *visual* : it serve the purpose of
 
 The `<em>` element is used to mark up text content of any kind that needs moderate emphasis :
 
-```
+```html
 I just <em>had</em> to eat this piece of cake.
 ```
 
@@ -48,7 +48,7 @@ Will render:
 
 This `<em>` elements differentiates itself from the `<i>` element, which merely sets the font to italics. If you only want to make text italic, but not for the purposes of emphasis, use `<i>`.
 
-```
+```html
 <p>Do you <em>really</em> need to buy a new phone?</p>
 
 <p>I am considering buying the new <i>Harry Potter</i> for my daughter</p>
