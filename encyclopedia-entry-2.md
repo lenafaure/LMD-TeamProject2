@@ -20,7 +20,7 @@ Will render :
 
 Most browsers will display the `<em>` element with the following default values:
 
-```html
+```css
 em { 
     font-style: italic;
 }
