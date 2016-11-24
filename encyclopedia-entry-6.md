@@ -3,7 +3,7 @@
 *The replace() method of the String global Object prototype searches a string for matches with the first parameter (searchFor) and replaces
 them with the second parameter (replaceString).*
 
-```
+```javascript
 string.replace(searchFor, replaceString)
 ```
 
@@ -14,7 +14,7 @@ The `searchFor` parameter: what word is going to be replaced. This can be a **st
 
 The `replaceString` parameter : what the word will be replaced with. This can be a **string** or a **function** returning a string.
 
-```
+```javascript
 string.replace(regexp|substr, newSubStr|function[, flags])
 ```
 
@@ -29,9 +29,11 @@ string.replace(regexp|substr, newSubStr|function[, flags])
 - **String**: 
 The most obvious way to do string replacement is by passing two strings to `replace()`: the string to find and the string to replace it with.
 
-```
+```javascript
+
 console.log("mommy".replace("m", "t"));
 // → tommy
+
 ```
 
 It’s worth mentioning that this approach is case sensitive. Searching for "M" in the above example would not work and the console would still print *"mommy"*. We will see how to counter this behaviour later on.
@@ -39,9 +41,11 @@ It’s worth mentioning that this approach is case sensitive. Searching for "M" 
 
 There is one major caveat if the first parameter is a simple string : only  the first occurence of the `searchFor` is replaced, so :
 
-```
+```javascript
+
 var result = "to_be_determined".replace('_', '-');
 console.log(result);
+
 ```
 
 will produce “to-be_determined”, which is supposedly not what we were trying to achieve.
@@ -52,16 +56,20 @@ To replace all occurrences, you’ll want to use the regex flavored version of `
 - **Regular Expression**: 
 Let's do another replace, except this time, we'll use a a regular expression instead of a string. The only change we need to make is to surround our `searchFor `word with slashes / / instead of quotations " ".
 
-```
+```javascript
+
 console.log("Abracadabra".replace(/a/, "o"));
 // → "Abrocadabra"
+
 ```
 
 What's going on here ? The character that was replaced was only the second "a" : the first capital "A" was not recognized because our search is case sensitive. Let's add the `i` (ignore) option to make the search case insensitive : 
 
-```
+```javascript
+
 console.log("Abracadabra".replace(/a/i, "o"));
 // → "obracadabra"
+
 ```
 
 Ok, now the first "A" character has been recognized and replaced. But what we want to do is to replace *all* the "a" characters in the string. Let's add the `g` (global) option this time : 
@@ -93,24 +101,28 @@ Let's have a look at an example to understand how to use the special character a
 
 The following uses a regex to look for a 4 digit number and replace it with the same number, but with dashes between the digits :
 
-```
+```javascript
+
 var pin = 'Your new PIN code is 4197.';
 var newPin = pin.replace(/(\d)(\d)(\d)(\d)/g, '$1-$2-$3-$4');
 console.log(newPin);
 
 // "Your new PIN code is 4-1-9-7."
+
 ```
 
 `\d` is a special regex element that matches any single digit, so we use 4 of those to find 4 digit numbers in a row. Each one is wrapped in parenthesis (), which we refer to as a *group*, and lets us reference them in the replacement string.
 
 `$1` is replaced with whatever was matched in the first set of parenthesis, `$2` with what’s in the second, and so on. This means that we can play a little with the string and for example if we wanted to reverse the PIN code we would just do : 
 
-```
+```javascript
+
 var pin = 'Your new PIN code is 4197.';
 var newPin = pin.replace(/(\d)(\d)(\d)(\d)/g, '$4-$3-$2-$1');
 console.log(newPin);
 
 // "Your new PIN code is 7-9-1-4."
+
 ```
 
 
@@ -118,7 +130,8 @@ console.log(newPin);
 
 **If  replaceString is a function**, it will be called for each match, and the string returned by the function will be used as the replacement text.
 
-```
+```javascript
+
 var a = "The fbi's ten most wanted fugitives.";
 var b = "fbi";
 var newString = a.replace(b, function replacer(match){
@@ -127,6 +140,7 @@ var newString = a.replace(b, function replacer(match){
 console.log(newString);
 
 // Prints "The FBI's ten most wanted fugitives."
+
 ```
 
 
@@ -134,12 +148,14 @@ console.log(newString);
 
 Sometimes you just want  to replace a simple chain of characters by another. It is indeed useful to replace a word or a group of words, but is not as frequently used as the regular expressions:
 
-```
+```javascript
+
 var string = "My name is Bond";
 var result = string.replace("Bond", "James Bond");
 
 console.log(result);
 // Prints "My name is James Bond"
+
 ```
 
 
@@ -147,12 +163,14 @@ console.log(result);
 
 As we saw previously, it is possible to use capturing parenthesis to extract informations and reuse them in the output string. Let's say for example that we have a date written in US format : 05/09/2016, and we want to convert it to a day/month/year european format. We can definitely do that with regular expression and `replace()`:
 
-```
+```javascript
+
 var usDate = "05/09/2016";
 var euDate = usDate.replace(/(\d{2})\/(\d{2})\/(\d{4})$/, "$2/$1/$3");
 
 console.log(euDate);
 // Prints "09/05/2016";
+
 ```
 
 Every number is captured within a parenthesis, and to retrieve each parenthesis, we just have to call $1, $2, $3 which correspond to each parenthesis in the order they were declared.
@@ -174,8 +192,10 @@ Instead of using a chain of characters for replacement, it is possible to use a 
 
 The parameters of the function have to respect a certain order (even if their names can vary) :
 
-```
+```javascript
+
 function(str, p1, p2, p3 /* ... */, offset, s)
+
 ```
 
 Let's review in detail the meaning of each parameter : 
@@ -199,7 +219,8 @@ It contains the whole string.
 
 Let's illustrate this with a script that will look for numbers in a string and add one to each number it founds : 
 
-```
+```javascript
+
 var string = "In 2 years I will be 20 years old";
 
 var result = string.replace(/(\d+)/g, function(str, p1) {
@@ -215,6 +236,7 @@ var result = string.replace(/(\d+)/g, function(str, p1) {
 
 console.log(result);
 // Prints "In 3 years I will be 21 years old"
+
 ```
 
 Since we added the global `g` option to our regular expression, every digit (`d+` indicates that the number can have an infinite number of digits) in the string will be replaced. 
