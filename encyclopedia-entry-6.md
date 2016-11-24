@@ -74,9 +74,11 @@ console.log("Abracadabra".replace(/a/i, "o"));
 
 Ok, now the first "A" character has been recognized and replaced. But what we want to do is to replace *all* the "a" characters in the string. Let's add the `g` (global) option this time : 
 
-```
+```javascript
+
 console.log("Abracadabra".replace(/a/ig, "o"));
 // → "obrocodobro"
+
 ```
 
 Finally ! When a `g` option is added to the regular expression,  *all* matches in the string will be replaced, not just the first.
